@@ -41,6 +41,10 @@ function start() {
   cron = setInterval(() => { timer(); }, 10);
 }
 
+function pause() {
+  clearInterval(cron);
+}
+
 function timer() {
   if ((millisecond += 10) == 1000) {
     millisecond = 0;
